@@ -25,9 +25,11 @@ spec:
         name: http-client
         version: v1
     spec:
+      imagePullSecrets:
+        - name: default-secret      
       containers:
         - name: http-client
-          image: "registry.hub.docker.com/mchudnovskiy/http-client:latest"
+          image: "swr.ru-moscow-1.hc.sbercloud.ru/sber/http-client:1.0"
           imagePullPolicy: Always
           resources:
             limits:

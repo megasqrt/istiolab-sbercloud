@@ -23,9 +23,11 @@ spec:
         name: http-server
         version: v1
     spec:
+      imagePullSecrets:
+        - name: default-secret     
       containers:
         - name: http-server
-          image: "registry.hub.docker.com/mchudnovskiy/http-server:latest"
+          image: "swr.ru-moscow-1.hc.sbercloud.ru/sber/http-server:1.0"
           imagePullPolicy: Always
           resources:
             limits:
